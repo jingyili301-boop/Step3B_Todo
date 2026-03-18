@@ -1,0 +1,14 @@
+{
+  "statusList": [
+    {"idStatus":1,"status":"To do"},
+    {"idStatus":2,"status":"In progress"},
+    {"idStatus":3,"status":"Done"},
+    {"idStatus":4,"status":"Cancelled"}
+  ],
+  "categoryList": [
+    {"idCategory":1,"category":"Personal"},
+    {"idCategory":2,"category":"Work"},
+    {"idCategory":3,"category":"Shopping"},
+    {"idCategory":4,"category":"Health"}
+  ]
+}

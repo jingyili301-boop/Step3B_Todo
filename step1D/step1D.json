@@ -1,0 +1,32 @@
+[
+  {
+    "idTask": "1",
+    "title": "Prepare project report",
+    "description": "Write the introduction and conclusion sections",
+    "creationDate": "2026-03-17",
+    "dueDate": "2026-03-20",
+    "idPriority": "1",
+    "idStatus": "2",
+    "idCategory": "2"
+  },
+  {
+    "idTask": "2",
+    "title": "Buy groceries",
+    "description": "Milk, eggs, bread and vegetables",
+    "creationDate": "2026-03-17",
+    "dueDate": "2026-03-18",
+    "idPriority": "3",
+    "idStatus": "1",
+    "idCategory": "3"
+  },
+  {
+    "idTask": "3",
+    "title": "Doctor appointment",
+    "description": "Annual check-up at 10am",
+    "creationDate": "2026-03-17",
+    "dueDate": "2026-03-25",
+    "idPriority": "2",
+    "idStatus": "1",
+    "idCategory": "4"
+  }
+]
