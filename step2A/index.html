@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>TO-DO LIST</h1>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Register a New Task</h2>
+            <form id="taskForm" action="#">
+                
+                <div class="field">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" placeholder="e.g., Create step 3" required>
+                </div>
+
+                <div class="field">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="4" placeholder="Add specific notes here..."></textarea>
+                </div>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label for="creationDate">Creation Date</label>
+                        <input type="date" id="creationDate" name="creationDate" required>
+                    </div>
+                    <div class="field">
+                        <label for="dueDate">Due Date</label>
+                        <input type="date" id="dueDate" name="dueDate" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="idPriority">Priority Level</label>
+                    <select id="idPriority" name="idPriority" required>
+                        <option value="" disabled selected>-- Select Priority --</option>
+                        <option value="1">Critical</option>
+                        <option value="2">High</option>
+                        <option value="3">Medium</option>
+                        <option value="4">Low</option>
+                        <option value="5">Optional</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="idCategory">Category</label>
+                    <select id="idCategory" name="idCategory" required>
+                        <option value="" disabled selected>-- Select Category --</option>
+                        <option value="1">Personal</option>
+                        <option value="2">Work</option>
+                        <option value="3">Shopping</option>
+                        <option value="4">Health</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="idStatus">Current Status</label>
+                    <select id="idStatus" name="idStatus" required>
+                        <option value="" disabled selected>-- Select Status --</option>
+                        <option value="1">To do</option>
+                        <option value="2">In progress</option>
+                        <option value="3">Done</option>
+                        <option value="4">Cancelled</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Add New Task</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TEAM 2 | Assignment 2A</p>
+    </footer>
+
+</body>
+</html>
