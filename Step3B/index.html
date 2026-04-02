@@ -64,6 +64,56 @@
                 "category": "Health"
             }
         ];
+
+        // 👉 在这里加 ↓↓↓
+        function saveTask() {
+
+            console.log("=== STEP 1: Read form values ===");
+
+            let title = document.getElementById("title").value;
+            let description = document.getElementById("description").value;
+            let creationDate = document.getElementById("creationDate").value;
+            let dueDate = document.getElementById("dueDate").value;
+            let idPriority = document.getElementById("idPriority").value;
+            let idCategory = document.getElementById("idCategory").value;
+            let idStatus = document.getElementById("idStatus").value;
+
+            let form = document.getElementById("taskForm");
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            let taskList = [];
+
+            let storedTasks = localStorage.getItem("taskList");
+
+            if (storedTasks != null) {
+                taskList = JSON.parse(storedTasks);
+            }
+
+            let newId = taskList.length + 1;
+
+            let task = {
+                idTask: newId,
+                title: title,
+                description: description,
+                creationDate: creationDate,
+                dueDate: dueDate,
+                idPriority: parseInt(idPriority),
+                idStatus: parseInt(idStatus),
+                idCategory: parseInt(idCategory)
+            };
+
+            taskList.push(task);
+
+            localStorage.setItem("taskList", JSON.stringify(taskList));
+
+            document.getElementById("taskForm").reset();
+
+            alert("Task saved successfully!");
+        }
     </script>
 </head>
 
@@ -139,13 +189,13 @@
                     </script>
                 </div>
 
-                <button type="submit" class="submit-btn">Add New Task</button>
+                <button type="button" class="submit-btn" onclick="saveTask()">Add New Task</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 TEAM 2 | Assignment 2B</p>
+        <p>&copy; 2026 TEAM 2 | Assignment 3B</p>
     </footer>
 </body>
 
